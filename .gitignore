@@ -70,6 +70,10 @@ target/
 # Jupyter Notebook
 .ipynb_checkpoints
 
+#credentials
+mycreds.txt
+client_secrets.json
+
 # pyenv
 .python-version
 
