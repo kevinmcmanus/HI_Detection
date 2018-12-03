@@ -74,6 +74,10 @@ target/
 mycreds.txt
 client_secrets.json
 
+# Data files
+data/
+images/
+
 # pyenv
 .python-version
 
