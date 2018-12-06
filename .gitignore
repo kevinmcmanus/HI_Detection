@@ -76,7 +76,11 @@ client_secrets.json
 
 # Data files
 data/
-images/
+#images/
+
+#Visual Studio
+.vs/
+HI_Detection.sln
 
 # pyenv
 .python-version
