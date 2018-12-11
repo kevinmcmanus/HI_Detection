@@ -57,24 +57,3 @@ def list_folder(parent, drive, is_top=True, files=False):
     except Exception as e:
         print(e)
 
-def get_pickled_fft(fname, dFclip=None):
-    """
-    Returns a data frame from a file assumed to contain a pickled fft dataframe
-    Parameters:
-        fname: path to the pickled file
-        dFclip: lower and upper limits for dF -- only records in this range are returned
-    Returns:
-        the fft dataframe
-    """
-    with bz2.BZ2File(fname, 'r') as sfile:
-        df4 = pickle.load(sfile)
-
-    # clip if necessary:
-    if dFclip is not None:
-        df4 = df4[(df4['dF'] >= dFclip[0])  & (df4['dF'] <= dFclip[1])]
-
-    dt = pd.to_datetime(df4['YMD'] + ' ' + df4['HMS'])
-    return pd.DataFrame({'dF': df4['dF'], 'dt':dt, 'PWR':df4['PWR'], 'PWR_dBm':df4['PWR_dBm']})
-
-
-    return df4
