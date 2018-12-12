@@ -81,6 +81,8 @@ data/
 #Visual Studio
 .vs/
 HI_Detection.sln
+HI_Detection.pyproj
+testit.py
 
 # pyenv
 .python-version
@@ -128,3 +130,4 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+*.pyproj
